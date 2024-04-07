@@ -1,0 +1,107 @@
+
+@font-face {
+    font-family: titlefont;
+    src: url("../MyriadPro-SemiExt.otf") format("opentype");
+}
+
+@font-face {
+    font-family: bodyfont;
+    src: url("../Pelita-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: secondary;
+    src: url("../opensans.ttf") format("truetype");
+}
+
+.parent-container {
+    background: #1A1A1A; /* Dark background for modern look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centered content */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.introduction {
+    font-family: titlefont;
+    color: #FFFFFF; /* Light text for contrast */
+    text-align: center; /* Center-aligned text */
+    width: 80%;
+    padding: 20px;
+}
+
+.title-container {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.aboutmetext {
+    font-family: secondary;
+    color: #C0C0C0; /* Soft color for text */
+    font-size: 20px; /* Adjusted for readability */
+    line-height: 1.5; /* Improved line spacing */
+    width: 80%;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titlehover {
+    color: #FFD700; /* Bright accent color */
+    font-size: 50px; /* Adjusted size */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    line-height: 1.2; /* Tighter line spacing */
+}
+
+.titlehover h1 {
+    margin: 0; /* Removed bottom margin and padding */
+}
+
+.titlehover:hover {
+    color: #58A6FF; /* Bright hover color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.titlehoversubtext {
+    color: #A0A0A0; /* Soft color */
+    font-size: 20px;
+    font-family: bodyfont;
+    text-align: left;
+    position: absolute;
+    top: 100%; /* Positioned below the title */
+    left: 0;
+    transition: color 0.3s ease;
+}
+
+.line {
+    height: 2px;
+    background-color: #555555; /* Subtle line color */
+    position: relative;
+    width: 40%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Adjusted margin */
+}
+
+.titlehover:hover .line,
+.line:hover {
+    background-color: #FFFFFF; /* Highlighted line color */
+}
+
+.project-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: #FFFFFF; /* White text for contrast */
+    font-weight: normal; /* Adjusted font weight */
+    border-radius: 10px;
+    padding: 15px; /* Adjusted padding */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-top: 20px;
+}
+
+.project-content:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    opacity: 0.85;
+}

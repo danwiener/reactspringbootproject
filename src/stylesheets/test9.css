@@ -1,4 +1,13 @@
-/* Importing Custom Fonts */
+/* Futuristic Fonts
+@font-face {
+    font-family: titlefont;
+    src: url("../Neuropolitical.ttf") format("truetype");
+}
+@font-face {
+    font-family: bodyfont;
+    src: url("../RobotoCondensed-Light.ttf") format("truetype");
+} */
+
 @font-face {
     font-family: titlefont;
     src: url("../MyriadPro-SemiExt.otf") format("opentype");
@@ -14,20 +23,28 @@
     src: url("../opensans.ttf") format("truetype");
 }
 
-/* Unique and Modern Color Palette */
+/* Neon Color Palette */
 :root {
-    --primary-color: #35495e; /* Dark Blue Shade */
-    --secondary-color: #4ecdc4; /* Soft Cyan */
-    --accent-color: #ff6b6b; /* Bright Red */
-    --text-color: #f7fff7; /* Soft White */
-    --background-color: #fefefe; /* Off White */
+    --primary-color: #0f0c29; /* Deep Space */
+    --secondary-color: #302b63; /* Galactic Purple */
+    --accent-color: #fc2f00; /* Laser Red */
+    --text-color: #e5e5e5; /* Moonlight White */
+    --background-color: #080710; /* Black Hole */
 }
 
-/* Body and Universal Styles */
+/* Animated Background */
 body {
     font-family: bodyfont;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background: linear-gradient(270deg, var(--primary-color), var(--secondary-color));
+    background-size: 400% 400%;
+    animation: AnimationName 15s ease infinite;
+}
+
+@keyframes AnimationName { 
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Parent Container */
@@ -40,8 +57,6 @@ body {
     min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
-    background-position: 100% 100%;
-    background-size: cover;
 }
 
 /* Introduction */
@@ -50,6 +65,7 @@ body {
     text-align: left;
     width: 100%;
     padding: 10px;
+    color: var(--secondary-color);
 }
 
 /* Title Container */
@@ -66,23 +82,25 @@ body {
     margin-top: 30px;
     color: var(--secondary-color);
     width: 80%;
-    font-family: secondary;
-    font-size: 18px; /* Adjusted for better readability */
+    font-family: bodyfont;
+    font-size: 18px;
 }
 
 /* Title Hover */
 .titlehover {
     color: var(--accent-color);
     font-size: 65px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     margin-bottom: 0;
     padding-bottom: 0;
     line-height: 0;
+    text-shadow: 0 0 5px var(--accent-color);
 }
 
-.titlehover:hover{
+.titlehover:hover {
     color: var(--secondary-color);
-    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+    transform: scale(1.1);
 }
 
 .titlehoversubtext {
@@ -104,23 +122,32 @@ body {
 .project-content {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    color: var(--text-color);
     font-weight: 500;
     opacity: 0.7;
     padding: 10px;
-    transition: background-color 0.5s ease, opacity 0.5s ease;
+    transition: background-color 0.5s ease, opacity 0.5s ease, transform 0.3s ease;
     margin-top: -20px;
 }
 
 .project-content:hover {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 1;
+    transform: translateY(-5px);
 }
 
 /* Responsiveness */
-@media(max-width:750px){
-    /* Adjustments for smaller screens */
+@media (max-width: 750px) {
+    .parent-container {
+        padding: 10px;
+    }
+    .aboutmetext, .introduction {
+        width: 100%;
+    }
+    .titlehover {
+        font-size: 48px;
+    }
+    .titlehoversubtext {
+        font-size: 20px;
+    }
 }
-
-/* Additional styling elements from the second CSS file... */
-

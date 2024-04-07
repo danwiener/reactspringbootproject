@@ -1,4 +1,17 @@
-/* Importing Custom Fonts */
+/* Elegant Fonts
+@font-face {
+    font-family: titlefont;
+    src: url("../PlayfairDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: bodyfont;
+    src: url("../Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: secondary;
+    src: url("../Montserrat-SemiBold.otf") format("opentype");
+} */
+
 @font-face {
     font-family: titlefont;
     src: url("../MyriadPro-SemiExt.otf") format("opentype");
@@ -14,18 +27,18 @@
     src: url("../opensans.ttf") format("truetype");
 }
 
-/* Unique and Modern Color Palette */
+/* Exquisite Color Palette */
 :root {
-    --primary-color: #35495e; /* Dark Blue Shade */
-    --secondary-color: #4ecdc4; /* Soft Cyan */
-    --accent-color: #ff6b6b; /* Bright Red */
-    --text-color: #f7fff7; /* Soft White */
-    --background-color: #fefefe; /* Off White */
+    --primary-color: #5d4157; /* Deep Purple */
+    --secondary-color: #838689; /* Metallic Silver */
+    --accent-color: #a8caba; /* Soft Teal */
+    --text-color: #faf0e6; /* Linen White */
+    --background-color: #ffefd5; /* Peach Puff */
 }
 
 /* Body and Universal Styles */
 body {
-    font-family: bodyfont;
+    font-family: bodyfont, sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
 }
@@ -40,8 +53,6 @@ body {
     min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
-    background-position: 100% 100%;
-    background-size: cover;
 }
 
 /* Introduction */
@@ -50,6 +61,7 @@ body {
     text-align: left;
     width: 100%;
     padding: 10px;
+    color: var(--secondary-color);
 }
 
 /* Title Container */
@@ -67,26 +79,25 @@ body {
     color: var(--secondary-color);
     width: 80%;
     font-family: secondary;
-    font-size: 18px; /* Adjusted for better readability */
+    font-size: 18px;
 }
 
 /* Title Hover */
 .titlehover {
     color: var(--accent-color);
     font-size: 65px;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease;
     margin-bottom: 0;
     padding-bottom: 0;
     line-height: 0;
 }
 
-.titlehover:hover{
-    color: var(--secondary-color);
-    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+.titlehover:hover {
+    transform: scale(1.1);
 }
 
 .titlehoversubtext {
-    color: rgba(78, 205, 196, 0.62);
+    color: rgba(168, 202, 186, 0.62);
     font-size: 25px;
     font-family: bodyfont;
     text-align: left;
@@ -97,30 +108,41 @@ body {
 
 /* Hover Effect on Title Hover and Subtext */
 .titlehover:hover ~ .titlehoversubtext {
-    color: rgba(98, 170, 192, 0.85);
+    color: rgba(168, 202, 186, 0.85);
 }
 
 /* Project Content */
 .project-content {
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    background-color: rgba(93, 65, 87, 0.3);
+    color: var(--text-color);
     font-weight: 500;
     opacity: 0.7;
     padding: 10px;
-    transition: background-color 0.5s ease, opacity 0.5s ease;
+    transition: background-color 0.5s ease, opacity 0.5s ease, transform 0.3s ease;
     margin-top: -20px;
 }
 
 .project-content:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(93, 65, 87, 0.5);
     opacity: 1;
+    transform: translateY(-5px);
 }
 
 /* Responsiveness */
-@media(max-width:750px){
-    /* Adjustments for smaller screens */
+@media (max-width: 750px) {
+    .parent-container {
+        padding: 10px;
+    }
+    .aboutmetext, .introduction {
+        width: 100%;
+    }
+    .titlehover {
+        font-size: 48px;
+    }
+    .titlehoversubtext {
+        font-size: 20px;
+    }
 }
 
-/* Additional styling elements from the second CSS file... */
-
+/* Additional styling elements based on your preferences */

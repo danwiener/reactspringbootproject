@@ -1,4 +1,3 @@
-/* Importing Custom Fonts */
 @font-face {
     font-family: titlefont;
     src: url("../MyriadPro-SemiExt.otf") format("opentype");
@@ -14,23 +13,20 @@
     src: url("../opensans.ttf") format("truetype");
 }
 
-/* Unique and Modern Color Palette */
 :root {
-    --primary-color: #35495e; /* Dark Blue Shade */
-    --secondary-color: #4ecdc4; /* Soft Cyan */
-    --accent-color: #ff6b6b; /* Bright Red */
-    --text-color: #f7fff7; /* Soft White */
-    --background-color: #fefefe; /* Off White */
+    --primary-color: #2c3e50; /* Dark Navy */
+    --secondary-color: #95a5a6; /* Soft Grey */
+    --accent-color: #7f8c8d; /* Slate Grey */
+    --text-color: #ecf0f1; /* Light Grey */
+    --background-color: #bdc3c7; /* Light Silver */
 }
 
-/* Body and Universal Styles */
 body {
     font-family: bodyfont;
     color: var(--text-color);
     background-color: var(--background-color);
 }
 
-/* Parent Container */
 .parent-container {
     background: var(--primary-color);
     display: flex;
@@ -44,7 +40,6 @@ body {
     background-size: cover;
 }
 
-/* Introduction */
 .introduction {
     font-family: titlefont;
     text-align: left;
@@ -52,13 +47,11 @@ body {
     padding: 10px;
 }
 
-/* Title Container */
 .title-container {
     position: relative;
     padding-bottom: 20px;
 }
 
-/* About Me Text */
 .aboutmetext {
     display: flex;
     flex-wrap: wrap;
@@ -70,7 +63,6 @@ body {
     font-size: 18px; /* Adjusted for better readability */
 }
 
-/* Title Hover */
 .titlehover {
     color: var(--accent-color);
     font-size: 65px;
@@ -86,7 +78,7 @@ body {
 }
 
 .titlehoversubtext {
-    color: rgba(78, 205, 196, 0.62);
+    color: rgba(95, 105, 106, 0.62);
     font-size: 25px;
     font-family: bodyfont;
     text-align: left;
@@ -95,16 +87,14 @@ body {
     margin-top: -10px;
 }
 
-/* Hover Effect on Title Hover and Subtext */
 .titlehover:hover ~ .titlehoversubtext {
     color: rgba(98, 170, 192, 0.85);
 }
 
-/* Project Content */
 .project-content {
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--primary-color);
     font-weight: 500;
     opacity: 0.7;
     padding: 10px;
@@ -113,14 +103,14 @@ body {
 }
 
 .project-content:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 1);
     opacity: 1;
 }
 
-/* Responsiveness */
+/* Other CSS elements are kept consistent with your original structure, 
+   adapted to the minimalist theme with the defined color variables. */
+
+/* Responsiveness and Media Queries as per your original structure */
 @media(max-width:750px){
     /* Adjustments for smaller screens */
 }
-
-/* Additional styling elements from the second CSS file... */
-

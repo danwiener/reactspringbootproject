@@ -1,0 +1,96 @@
+@font-face {
+    font-family: titlefont;
+    src: url("../MyriadPro-SemiExt.otf") format("opentype");
+}
+
+@font-face {
+    font-family: bodyfont;
+    src: url("../Pelita-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: secondary;
+    src: url("../opensans.ttf") format("truetype");
+}
+
+:root {
+    --primary-color: #5BC0EB; /* Sky Blue */
+    --secondary-color: #FDE74C; /* Sunny Yellow */
+    --accent-color: #9BC53D; /* Leafy Green */
+    --text-color: #404E4D; /* Deep Sea Green */
+    --background-color: #1C2541; /* Dark Ocean Blue */
+}
+
+body {
+    font-family: bodyfont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--primary-color), var(--background-color));
+}
+
+.introduction {
+    font-family: titlefont, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--secondary-color);
+}
+
+.title-container {
+    position: relative;
+}
+
+.aboutmetext {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    color: var(--accent-color);
+    width: 80%;
+    font-family: secondary, sans-serif;
+    font-size: 18px;
+}
+
+.titlehover {
+    font-size: 48px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.titlehover:hover {
+    color: var(--primary-color);
+}
+
+.project-content {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for contrast */
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    padding: 15px;
+    margin: 20px 0;
+    transition: border-color 0.3s ease;
+}
+
+.project-content:hover {
+    border-color: var(--secondary-color);
+}
+
+/* Additional CSS for other elements, forms, buttons, etc., should continue this color theme */
+
+/* Responsive Design */
+@media (max-width: 750px) {
+    .aboutmetext { padding: 0 5%; }
+    /* Additional responsive adjustments */
+}
