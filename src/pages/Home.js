@@ -3,13 +3,16 @@ import { json } from "react-router-dom";
 import aboutmedata from "./aboutmedata";
 import Header from ".././components/Header";
 
+
 export default function Home() {
+  
   const handleClickScroll = () => {
     const element = document.getElementById('carouselscroll');
     if (element) {
       element.scrollIntoView({behavior: 'smooth'});
     }
   };
+
   return (
     <div className="parent-container">
 
@@ -37,5 +40,6 @@ export default function Home() {
 
     </div>
   );
+  
 }
 

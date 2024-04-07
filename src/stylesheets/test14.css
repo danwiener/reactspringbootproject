@@ -1,0 +1,126 @@
+/* Importing Custom Fonts */
+@font-face {
+    font-family: titlefont;
+    src: url("../MyriadPro-SemiExt.otf") format("opentype");
+}
+
+@font-face {
+    font-family: bodyfont;
+    src: url("../Pelita-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: secondary;
+    src: url("../opensans.ttf") format("truetype");
+}
+
+/* Unique and Modern Color Palette */
+:root {
+    --primary-color: #35495e; /* Dark Blue Shade */
+    --secondary-color: #4ecdc4; /* Soft Cyan */
+    --accent-color: #ff6b6b; /* Bright Red */
+    --text-color: #f7fff7; /* Soft White */
+    --background-color: #fefefe; /* Off White */
+}
+
+/* Body and Universal Styles */
+body {
+    font-family: bodyfont;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Parent Container */
+.parent-container {
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-position: 100% 100%;
+    background-size: cover;
+}
+
+/* Introduction */
+.introduction {
+    font-family: titlefont;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Title Container */
+.title-container {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+/* About Me Text */
+.aboutmetext {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    color: var(--secondary-color);
+    width: 80%;
+    font-family: secondary;
+    font-size: 18px; /* Adjusted for better readability */
+}
+
+/* Title Hover */
+.titlehover {
+    color: var(--accent-color);
+    font-size: 65px;
+    transition: color 0.3s ease;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 0;
+}
+
+.titlehover:hover{
+    color: var(--secondary-color);
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.titlehoversubtext {
+    color: rgba(78, 205, 196, 0.62);
+    font-size: 25px;
+    font-family: bodyfont;
+    text-align: left;
+    transition: color 0.3s ease;
+    position: absolute;
+    margin-top: -10px;
+}
+
+/* Hover Effect on Title Hover and Subtext */
+.titlehover:hover ~ .titlehoversubtext {
+    color: rgba(98, 170, 192, 0.85);
+}
+
+/* Project Content */
+.project-content {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-weight: 500;
+    opacity: 0.7;
+    padding: 10px;
+    transition: background-color 0.5s ease, opacity 0.5s ease;
+    margin-top: -20px;
+}
+
+.project-content:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+/* Responsiveness */
+@media(max-width:750px){
+    /* Adjustments for smaller screens */
+}
+
+/* Additional styling elements from the second CSS file... */
+
