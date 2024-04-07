@@ -1,0 +1,232 @@
+@font-face {
+    font-family: titlefont;
+    src: url("../MyriadPro-SemiExt.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: bodyfont;
+    src: url("../Pelita-SemiBold.otf") format("opentype");
+  }
+
+.menu-icon{
+    color: #323E4D;
+    font-size: 100px;
+    margin: 20px;
+    z-index: 2;
+    cursor: pointer;
+    z-index: 7;
+}
+
+
+#headerbg{
+    background-position: 100% 100%;
+    background-size: cover;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-family: titlefont;
+    justify-content: center;
+}
+
+.show-header{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    right:0;
+    background: rgba(25, 25, 25, 0.8);    
+    height: 65vh;
+    width: 50%;
+    border-bottom-left-radius: 50%;
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 6;
+}
+
+.hide-header{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    right:0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+
+ul li{
+    color:#CBD5E1;
+    list-style: none;
+    margin-top: 25px;
+    font-size: 25px;
+    font-family: titlefont;
+}
+
+ul a{
+    color: #CBD5E1;
+    text-decoration: none;
+    font-family: titlefont;
+}
+
+.active{
+    border: 3px solid #4582AD;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: titlefont;
+}
+
+.active a{
+    font-weight: bold;
+    color: #f8ffeb;
+    text-shadow: 0px 0px 10px #CBD5E1;
+    font-family: titlefont;
+}
+
+.contact{
+    padding-top: 50px;
+}
+.contact img{
+    width: 100%;
+    height: 100%;
+    transform:scaleY(0.75);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.contactimg{
+    position: relative !important;
+}
+
+.contact button{
+    background-color: #4582ad;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-content{
+    background-color: #191919;
+    text-align: center;
+    color: black;
+}
+
+.form-control:focus{
+    transform: scale(1.02);
+}
+
+.form-control{
+    box-shadow: none;
+}
+
+
+.contactclass{
+    background: rgb(230,230,230);
+    background: linear-gradient(57deg, rgba(230,230,230,1) 0%, rgba(40,133,199,1) 35%, rgba(25,25,25,1) 100%);
+    z-index: 9;
+}
+
+input, textarea{
+    margin-top: 25px !important;
+    border: none !important;
+    background-color: #f2f2f2 !important;
+    background: #e6e6e6;
+    box-shadow: inset 6px 6px 0px #c4c4c4,
+                inset -6px -6px 0px #ffffff !important;
+    border-radius: 20px !important;
+}
+
+#dotnetbot{
+    border-radius: 50px;
+    background: #e6e6e6;
+    box-shadow: inset 8px 8px 10px #9a9a9a,
+                inset -8px -8px 10px #ffffff;
+}
+
+.footer-parent{
+    background-color: #e6e6e6;
+    padding-top: 1%;
+}
+
+
+.designed{
+    font-family: titlefont;
+    color: #CBD5E1;
+}
+
+#mynamefooter{
+    font-family: titlefont;
+    color: #f8ffeb;
+    text-shadow: 0px 0px 10px #f8ffeb;
+}
+
+
+
+@media(max-width:750px) {
+    .show-header{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top:0;
+        right:0;
+        background: rgba(25, 25, 25, 0.8);  
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        transition: width 0.5s;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        border-left: 2px solid rgba(255, 255, 255, 0.46);
+    }
+    .hide-header{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top:0;
+        right:0;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        transition: all 0s;
+    }
+    .menu-icon{
+        color: #323E4D;
+        font-size: 45px;
+    }
+
+    .contact{
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+    .contact-form{
+        padding: 15px;
+    }
+}
+
+#pushdownhireme{
+    margin-bottom: 100px !important;
+    min-height: 100% !important;
+}
+
+.footercontact{
+    bottom: 0px !important;
+    min-width: auto;
+    right: 0;
+    left: 0;
+}
