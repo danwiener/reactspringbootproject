@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { json } from "react-router-dom";
 import aboutmedata from "./aboutmedata";
 import Header from ".././components/Header";
 
+// List of available themes
+const themes = {
+  default: "home.css",
+  theme2: "test3.css",
+  theme3: "test2.css",
+  theme4: "test4.css",
+  theme6: "test6.css",
+  theme7: "test7.css",
+  theme8: "test8.css",
+  theme9: "test9.css",
+  theme10: "test10.css",
+  theme11: "test11.css",
+  theme12: "test12.css",
+  theme13: "test13.css",
+  theme14: "test14.css"
+  // Add more themes as needed
+};
 
 export default function Home() {
-  
-  const handleClickScroll = () => {
-    const element = document.getElementById('carouselscroll');
-    if (element) {
-      element.scrollIntoView({behavior: 'smooth'});
-    }
-  };
-
+  const [currentTheme, setCurrentTheme] = useState("default");
+  useEffect(() => {
+    const themeLink = document.getElementById('theme-style');
+    themeLink.href = themes[currentTheme];
+}, [currentTheme]);
   return (
     <div className="parent-container">
 
@@ -36,6 +50,14 @@ export default function Home() {
               </div>
             </div>
           })}
+      </div>
+
+      <div className="theme-buttons">
+        {Object.keys(themes).map((theme) => (
+          <button key={theme} onClick={() => setCurrentTheme(theme)}>
+            {theme}
+          </button>
+        ))}
       </div>
 
     </div>

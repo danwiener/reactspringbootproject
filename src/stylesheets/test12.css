@@ -3,11 +3,13 @@
 /* Bold Fonts */
 @font-face {
     font-family: titlefont;
-    src: url("../Oswald-Bold.ttf") format("truetype");
+    src: url("../Oswald.ttf") format("truetype");
+    font-weight: 700;
 }
 @font-face {
     font-family: bodyfont;
-    src: url("../Raleway-Regular.ttf") format("truetype");
+    src: url("../Raleway.ttf") format("truetype");
+    font-weight: 400;
 }
 
 /* Vibrant Color Palette */

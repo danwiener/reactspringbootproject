@@ -1,7 +1,8 @@
-/* Elegant Fonts
+
 @font-face {
     font-family: titlefont;
-    src: url("../PlayfairDisplay-Bold.ttf") format("truetype");
+    src: url("../PlayfairDisplay.ttf") format("truetype");
+    font-weight: 500;
 }
 @font-face {
     font-family: bodyfont;
@@ -9,23 +10,9 @@
 }
 @font-face {
     font-family: secondary;
-    src: url("../Montserrat-SemiBold.otf") format("opentype");
-} */
-
-@font-face {
-    font-family: titlefont;
-    src: url("../MyriadPro-SemiExt.otf") format("opentype");
+    src: url("../Montserrat.ttf") format("truetype");
 }
 
-@font-face {
-    font-family: bodyfont;
-    src: url("../Pelita-SemiBold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: secondary;
-    src: url("../opensans.ttf") format("truetype");
-}
 
 /* Exquisite Color Palette */
 :root {

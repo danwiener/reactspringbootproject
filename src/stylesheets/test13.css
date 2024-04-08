@@ -2,11 +2,12 @@
 /* Contemporary Fonts */
 @font-face {
     font-family: titlefont;
-    src: url("../Montserrat-Bold.ttf") format("truetype");
+    src: url("../Montserrat.ttf") format("truetype");
+    font-weight: 700;
 }
 @font-face {
     font-family: bodyfont;
-    src: url("../HelveticaNeue-Light.ttf") format("truetype");
+    src: url("../HelveticaNeueLight.ttf") format("truetype");
 }
 
 /* Monochrome Color Palette */
