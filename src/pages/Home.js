@@ -22,11 +22,6 @@ const themes = {
 };
 
 export default function Home() {
-  const [currentTheme, setCurrentTheme] = useState("default");
-  useEffect(() => {
-    const themeLink = document.getElementById('theme-style');
-    themeLink.href = themes[currentTheme];
-}, [currentTheme]);
   return (
     <div className="parent-container">
 
@@ -52,13 +47,6 @@ export default function Home() {
           })}
       </div>
 
-      <div className="theme-buttons">
-        {Object.keys(themes).map((theme) => (
-          <button key={theme} onClick={() => setCurrentTheme(theme)}>
-            {theme}
-          </button>
-        ))}
-      </div>
 
     </div>
   );
